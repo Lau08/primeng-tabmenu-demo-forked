@@ -1,0 +1,26 @@
+<div class="card">
+  <h5>Default</h5>
+  <p-tabMenu
+    #menuItems
+    [model]="items"
+    [activeItem]="activeItem"
+    (click)="activateMenu()"
+  ></p-tabMenu>
+  <div *ngIf="activeItem.label === 'Home'">
+    {{ activeItem.label }}
+  </div>
+  <div *ngIf="activeItem.label === 'Calendar'">
+    {{ activeItem.label }}
+  </div>
+</div>
+
+<div class="card">
+  <h5>Scrollable</h5>
+  <p-tabMenu
+    [model]="scrollableItems"
+    [activeItem]="activeItem2"
+    [scrollable]="true"
+  >
+  </p-tabMenu>
+  <div *ngIf="activeItem.label === 'Tab 1'">Calendar Helooo</div>
+</div>
